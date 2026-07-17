@@ -10,7 +10,7 @@ Tujuan utama dari project ini adalah mengintegrasikan data aktivitas belajar mah
 * **Data Modeling:** Star Schema (Tabel Fakta & Dimensi)
 * **Business Intelligence / Visualisasi:** Tableau Desktop & Tableau Public
 
-Data Cleaning & ETL Challenges
+## Data Cleaning & ETL Challenges
 Dataset awal memiliki banyak masalah umum di dunia nyata. Berikut adalah tantangan data yang berhasil diselesaikan menggunakan Python (Pandas):
 
 Multi-Source Integration: Menggabungkan 5 file berbeda (3 format .xlsx dan 2 format .csv) menjadi satu pipeline data yang terintegrasi.
@@ -23,7 +23,7 @@ Standardisasi Format Tanggal: Menyeragamkan berbagai format tanggal penulisan ya
 
 Script pembersihan lengkap dapat dilihat di folder: etl_scripts/elearning_etl_process.ipynb
 
-Data Modeling (Star Schema)
+## Data Modeling (Star Schema)
 Data yang telah dibersihkan kemudian ditransformasikan ke dalam desain Star Schema untuk mengoptimalkan kinerja query pada dashboard BI:
 
 Fact Table: fact_aktivitas_belajar (menyimpan metrik kuantitatif seperti durasi belajar, nilai, jumlah klik, dan foreign keys).
@@ -36,6 +36,6 @@ dim_instruktur (informasi instruktur pengampu)
 
 dim_course (detail materi dan modul e-learning)
 
-Interactive Tableau Dashboard
+## Interactive Tableau Dashboard
 Berikut adalah link visualisasi interaktif yang sudah dirancang:
 https://public.tableau.com/app/profile/rahmank/vizzes
