@@ -12,29 +12,21 @@ Tujuan utama dari project ini adalah mengintegrasikan data aktivitas belajar mah
 
 ## Data Cleaning & ETL Challenges
 Dataset awal memiliki banyak masalah umum di dunia nyata. Berikut adalah tantangan data yang berhasil diselesaikan menggunakan Python (Pandas):
-
-Multi-Source Integration: Menggabungkan 5 file berbeda (3 format .xlsx dan 2 format .csv) menjadi satu pipeline data yang terintegrasi.
-
-Handling Typo & Inkonsistensi Kategori: Mengoreksi kesalahan penulisan (typo) pada nama instruktur, program studi, dan merapikan kategori yang tidak konsisten.
-
-Handling Duplicate & Missing Value: Mengidentifikasi data transaksi ganda, serta menangani nilai kosong (null values) agar tidak merusak kalkulasi akurasi performa belajar.
-
-Standardisasi Format Tanggal: Menyeragamkan berbagai format tanggal penulisan yang berbeda dari tiap sumber menjadi format standar ISO YYYY-MM-DD.
+* Multi-Source Integration: Menggabungkan 5 file berbeda (3 format .xlsx dan 2 format .csv) menjadi satu pipeline data yang terintegrasi.
+* Handling Typo & Inkonsistensi Kategori: Mengoreksi kesalahan penulisan (typo) pada nama instruktur, program studi, dan merapikan kategori yang tidak konsisten.
+* Handling Duplicate & Missing Value: Mengidentifikasi data transaksi ganda, serta menangani nilai kosong (null values) agar tidak merusak kalkulasi akurasi performa belajar.
+* Standardisasi Format Tanggal: Menyeragamkan berbagai format tanggal penulisan yang berbeda dari tiap sumber menjadi format standar ISO YYYY-MM-DD.
 
 Script pembersihan lengkap dapat dilihat di folder: etl_scripts/elearning_etl_process.ipynb
 
 ## Data Modeling (Star Schema)
-Data yang telah dibersihkan kemudian ditransformasikan ke dalam desain Star Schema untuk mengoptimalkan kinerja query pada dashboard BI:
-
-Fact Table: fact_aktivitas_belajar (menyimpan metrik kuantitatif seperti durasi belajar, nilai, jumlah klik, dan foreign keys).
-
-Dimension Tables:
-
-dim_mahasiswa (informasi demografi mahasiswa)
-
-dim_instruktur (informasi instruktur pengampu)
-
-dim_course (detail materi dan modul e-learning)
+Data yang telah dibersihkan kemudian ditransformasikan ke dalam desain Star Schema untuk mengoptimalkan kinerja query pada dashboard BI, yang mencakup:
+* Fact Table:
+  1. fact_aktivitas_belajar (menyimpan metrik kuantitatif seperti durasi belajar, nilai, jumlah klik, dan foreign keys).
+* Dimension Tables:
+  1. dim_mahasiswa (informasi demografi mahasiswa)
+  2. dim_instruktur (informasi instruktur pengampu)
+  3. dim_course (detail materi dan modul e-learning)
 
 ## Interactive Tableau Dashboard
 Berikut adalah link visualisasi interaktif yang sudah dirancang:
